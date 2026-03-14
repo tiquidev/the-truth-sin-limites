@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import type { Category } from '@/constants/mockContent';
 import { PosterCard } from '@/components/poster-card';
+import type { Category } from '@/constants/mockContent';
 
 interface CategoryRowProps {
   category: Category;
@@ -38,10 +38,10 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#fff',
     marginBottom: 12,
-    marginHorizontal: 16,
+    marginHorizontal: 8,
   },
   scrollContent: {
-    paddingHorizontal: 16,
-    paddingRight: 24,
+    paddingHorizontal: 8,
+    paddingRight: 0,
   },
 });
