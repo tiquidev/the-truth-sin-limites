@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -5,9 +6,10 @@ import { CategoryRow } from '@/components/category-row';
 import { CATEGORIES } from '@/constants/mockContent';
 
 export default function HomeScreen() {
+  const router = useRouter();
+
   const handleMoviePress = (movieId: string) => {
-    // TODO: navegar a detalle o abrir modal
-    console.log('Película seleccionada:', movieId);
+    router.push(`/movie/${movieId}`);
   };
 
   return (
