@@ -67,11 +67,8 @@ export default function MovieDetailScreen() {
     );
   };
 
-  const handlePlayAudio = (title: string) => {
-    Alert.alert('Escuchar', `¿Reproducir "${title}"?`, [
-      { text: 'Cancelar', style: 'cancel' },
-      { text: 'Escuchar', onPress: () => { } },
-    ]);
+  const handlePlayAudio = () => {
+    router.push({ pathname: '/audio-player', params: { id: movie!.id } });
   };
 
   if (!movie) {
@@ -165,7 +162,7 @@ export default function MovieDetailScreen() {
                     key={episode.id}
                     episode={episode}
                     variant="audio"
-                    onPress={() => handlePlayEpisode(movie.title, episode)}
+                    onPress={() => handlePlayAudio()}
                   />
                 ))}
               </View>
@@ -177,7 +174,7 @@ export default function MovieDetailScreen() {
                 <Text style={styles.sectionTitle}>Escuchar</Text>
                 <Pressable
                   style={({ pressed }) => [styles.playCard, pressed && styles.playCardPressed]}
-                  onPress={() => handlePlayAudio(movie.title)}
+                  onPress={() => handlePlayAudio()}
                 >
                   <View style={styles.playCardLeft}>
                     <Text style={styles.playIcon}>▶</Text>

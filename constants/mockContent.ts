@@ -118,7 +118,7 @@ export const CATEGORIES: Category[] = [
     name: 'Audio',
     items: [
       {
-        id: 'au1',
+        id: 'salida',
         title: 'Meditación guiada: 10 min',
         posterUrl: 'https://picsum.photos/seed/au1/200/300',
         description: 'Sesión de respiración y relajación para terminar el día. Ideal para conciliar el sueño.',
